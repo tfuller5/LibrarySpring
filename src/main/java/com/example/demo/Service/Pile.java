@@ -1,10 +1,12 @@
-package com.example.demo;
+package com.example.demo.Service;
+
+import com.example.demo.Model.Book;
 
 import java.util.List;
 import java.util.Stack;
 
 // this is simply a collection of various books
-public class Pile extends CollectionOfBooks {
+public class Pile extends collectionOfBooks {
     private int pileId;
     private String pileName;
 

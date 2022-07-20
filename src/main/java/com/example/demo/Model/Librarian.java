@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Model;
 
 public class Librarian {
     private String name;

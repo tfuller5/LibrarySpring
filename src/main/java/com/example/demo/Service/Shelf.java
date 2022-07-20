@@ -1,10 +1,12 @@
-package com.example.demo;
+package com.example.demo.Service;
+
+import com.example.demo.Model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Shelf extends CollectionOfBooks {
+public class Shelf extends collectionOfBooks {
     private int shelfId;
     private String shelfName;
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class loginAttempt {
-    @PostMapping(path = {"/login_attempt"})
+    @PostMapping(path = {"/"})
     // RequestBody captures the data your sending
     public String loginAttempt(@RequestBody String username) {
         System.out.println(username);

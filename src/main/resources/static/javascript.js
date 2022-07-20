@@ -8,7 +8,7 @@ function send_deets() {
     let xhr = new XMLHttpRequest();
 
     // on the frontend this is what POST looks like
-    xhr.open("POST", "http://localhost:8080/login_attempt");
+    xhr.open("POST", "http://82.69.46.159:8080/");
 
 
     //xhr.setRequestHeader("Accept", "application/json");

@@ -12,12 +12,13 @@ function send_deets() {
     // the login.html
     elm1 = document.getElementById("username")
     elm2 = document.getElementById("password")
-    console.log(elm1.text + elm2.text)
+    console.log(elm1.value)
+    console.log(elm2.value)
 
     let xhr = new XMLHttpRequest();
 
     // on the frontend this is what POST looks like
-    xhr.open("POST", "http://82.69.46.159:8080/delivery?passwordAttempt="+elm2.text+"&usernameAttempt="+elm1.text);
+    xhr.open("POST", "http://82.69.46.159:8080/delivery?passwordAttempt="+elm2.value+"&usernameAttempt="+elm1.value);
 
 
     //xhr.setRequestHeader("Accept", "application/json");
@@ -29,7 +30,7 @@ function send_deets() {
     console.log("sending card")
 
     // this line sends information from the front end to the backend
-    xhr.send(data);
+    xhr.send();
 
 }
 

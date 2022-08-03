@@ -1,10 +1,10 @@
 function responded(text) {
-    if (text == "success") {
+    if (text === "success") {
         window.location.assign("http://82.69.46.159:8080/success")
     }
-    if (text == "fail") {
-            window.location.assign("http://82.69.46.159:8080/fail")
-        }
+    if (text === "fail") {
+        window.location.assign("http://82.69.46.159:8080/fail")
+    }
 }
 
 function send_deets() {
@@ -15,26 +15,18 @@ function send_deets() {
     console.log(elm1.value)
     console.log(elm2.value)
 
+    ////////////////////////////////
     let xhr = new XMLHttpRequest();
-
-    // on the frontend this is what POST looks like
-    xhr.open("POST", "http://82.69.46.159:8080/delivery?passwordAttempt="+elm2.value+"&usernameAttempt="+elm1.value);
-
-
-    //xhr.setRequestHeader("Accept", "application/json");
-    //xhr.setRequestHeader("Content-Type", "application/json");
-
     xhr.onload = () => responded(xhr.responseText);
 
-    let data = elm1.text + elm2.text
-    console.log("sending card")
-
-    // this line sends information from the front end to the backend
+    // this is POST on the front end!
+    const URL = "http://82.69.46.159:8080/delivery?passwordAttempt="+elm2.value+"&usernameAttempt="+elm1.value
+    xhr.open("POST", URL);
     xhr.send();
+    console.log("Made a POST request to: "+URL)
 
 }
 
 function get_book_name() {
    window.location.assign("http://82.69.46.159:8080/books")
-
 }

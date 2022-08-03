@@ -4,6 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+// java: error: invalid source release: 17
+
+
+
+
 
 @SpringBootApplication
 public class MinalApplication {

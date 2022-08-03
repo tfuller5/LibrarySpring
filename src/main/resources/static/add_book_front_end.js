@@ -6,7 +6,7 @@ function add_book () {
 
     let xhr = new XMLHttpRequest();
     xhr.onload = () => draw_book_images(xhr.responseText);
-    draw_book_images('[2, 4, 5]')
+    // draw_book_images('[2, 4, 5]')
 
     // on the frontend this is what POST looks like
     const URL = "http://82.69.46.159:8080/add_book?book_title="+input_box.value
@@ -22,7 +22,7 @@ function remove_book () {
     //draw_book_image()
 
     let xhr = new XMLHttpRequest();
-    xhr.onload = () => draw_book_images(xhr.responseText);
+    xhr.onload = () => console.log(xhr.responseText);
     draw_book_images('[1, 3, 5]')
 
     // on the frontend this is what POST looks like
@@ -38,13 +38,16 @@ console.log(elm)
 elm.addEventListener("click", remove_book)
 
 function draw_book_images(json_data) {
+    console.log("#################################")
     console.log(json_data)
     let arr = JSON.parse(json_data)
+    console.log(arr)
 
     var container = document.getElementById("imgs")
     container.innerHTML = ''
 
-    for (const num of arr) {
+    for (var i=0; i<arr.length; i++) {
+    num = arr[i]
         var new_image = document.createElement("img")
 
         //console.log(container)

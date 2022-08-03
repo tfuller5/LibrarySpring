@@ -10,8 +10,16 @@ public class Shelf extends collectionOfBooks {
     private int shelfId;
     private String shelfName;
 
-    // one instance of a book
-    Book book = new Book();
-    // arraylist of books
-    List<Book> listOfBooks = new ArrayList<>();
+    public void addBookToShelf() {
+        Book harryBook = new Book();
+        harryBook.setBookName("Harry Potter and the chamber of secrets");
+        // arraylist of books
+        List<Book> listOfBooks = new ArrayList<>();
+        // add a book into the arraylist
+        listOfBooks.add(harryBook);
+        // print the listOfBooks
+        System.out.println(listOfBooks);
+    }
+
+
 }

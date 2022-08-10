@@ -53,9 +53,14 @@ public class libraryController {
         // 1. when add book is called: add a number which is not in the array
         // 2. e.g. [1, 2, 3] can add 4 and 5
         // 3. return the array converted to a string
+
         ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(4);
-        numbers.add(3);
+        numbers.add(1); // element 0
+        numbers.add(3); // element 1
+
+        if (numbers.get(0) == 1 && numbers.get(1) == 3) {
+            numbers.set(1, 2);
+        }
         return numbers.toString();
     }
 
